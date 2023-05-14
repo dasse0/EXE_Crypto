@@ -1,0 +1,19 @@
+.Loginlogo {
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	align-items: center;
+	margin-top: 20px;
+
+	justify-content: center;
+
+	height: 80px;
+	width: 160px;
+	border-color: transparent;
+}
+
+.LoginDiv1 {
+	background-color: #00000095;
+
+}

@@ -1,0 +1,78 @@
+.ec_main {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+
+}
+
+
+
+.ec_main_navbar::before,
+.ec_main_navbar::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  background: linear-gradient(45deg, red, blue, green, yellow, #e11d74, black, #ffff00, #aa0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 25s linear infinite;
+}
+
+
+.ec_main_navbar::after {
+  filter: blur(25px);
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+@import "rsuite/dist/rsuite-custom.css";
+
+.rs-nav-item-content {
+  text-decoration: none !important;
+}
+
+.rs-sidenav-inverse .rs-nav-item-content {
+  text-decoration: none !important;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+
+.rs-sidenav-inverse .rs-dropdown .rs-dropdown-toggle,
+.rs-sidenav-inverse .rs-dropdown .rs-dropdown-toggle.rs-dropdown-item-focus,
+.rs-sidenav-inverse .rs-dropdown .rs-dropdown-toggle:focus,
+.rs-sidenav-inverse .rs-dropdown .rs-dropdown-toggle:hover,
+.rs-sidenav-inverse .rs-dropdown.rs-dropdown-selected-within .rs-dropdown-toggle,
+.rs-sidenav-inverse .rs-dropdown.rs-dropdown-selected-within .rs-dropdown-toggle.rs-dropdown-item-focus,
+.rs-sidenav-inverse .rs-dropdown.rs-dropdown-selected-within .rs-dropdown-toggle:focus,
+.rs-sidenav-inverse .rs-dropdown.rs-dropdown-selected-within .rs-dropdown-toggle:hover,
+.rs-sidenav-inverse 
+.rs-sidenav-inverse .rs-sidenav-item.rs-dropdown-item-focus,
+.rs-sidenav-inverse .rs-sidenav-item:focus,
+.rs-sidenav-inverse .rs-sidenav-item:hover {
+  text-decoration: none !important;
+  
+  border-bottom: 3px solid #363636 !important;
+  background-color: #555555 !important;
+  color: #fff !important;
+}
+
+
+

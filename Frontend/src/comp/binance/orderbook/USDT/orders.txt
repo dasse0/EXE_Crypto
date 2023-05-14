@@ -1,0 +1,17 @@
+            <br />
+        <button>Buy MKT</button>
+        <button>Sell MKT</button>
+        <br />
+
+        
+        <button>Buy Limit</button>
+        <button>Sell Limit</button>
+        <br />
+
+        <button>Buy Stop</button>
+        <button>Sell Stop</button>
+        <br />
+
+        <button>Cancel All</button>
+        <button>Close Pos</button>
+        <button>Close All</button>

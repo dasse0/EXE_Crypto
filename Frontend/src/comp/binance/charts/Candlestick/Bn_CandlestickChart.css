@@ -1,0 +1,15 @@
+.BinanceCandlestickChart_1,
+.BinanceCandlestickChart_2,
+.BinanceCandlestickChart_3,
+.BinanceCandlestickChart_4,
+.BinanceCandlestickChart_5,
+.BinanceCandlestickChart_6 {
+    color: orange;
+
+    max-height: calc(45vh - 200px);
+
+
+
+
+}
+
