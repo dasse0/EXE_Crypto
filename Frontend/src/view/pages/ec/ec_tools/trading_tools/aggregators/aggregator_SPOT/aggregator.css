@@ -1,0 +1,70 @@
+@import "rsuite/dist/rsuite-custom.css";
+
+.rs-nav-item-content {
+    text-decoration: none !important;
+    
+}
+
+.rs-sidenav-inverse .rs-nav-item-content {
+    text-decoration: none !important;
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+
+.rs-sidenav-inverse,
+.rs-sidenav-inverse .rs-dropdown .rs-dropdown-toggle,
+.rs-sidenav-inverse .rs-dropdown-item-submenu:hover>.rs-dropdown-item-toggle,
+.rs-sidenav-inverse .rs-sidenav-item,
+.rs-sidenav-inverse .rs-sidenav-toggle-button {
+    background-color: #2a2a2a;
+    text-decoration: none !important;
+}
+
+
+.rs-sidenav-inverse,
+.rs-sidenav-inverse .rs-dropdown .rs-dropdown-toggle,
+.rs-sidenav-inverse .rs-dropdown-item-submenu:hover>.rs-dropdown-item-toggle,
+.rs-sidenav-inverse .rs-sidenav-item,
+.rs-sidenav-inverse .rs-sidenav-toggle-button {
+    background-color: #2a2a2a;
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: row;
+}
+
+.Aggregator-Sidebar {
+
+    min-width: 180px;
+    width: 5%;
+    background-color: #2a2a2a;
+    text-decoration: none !important;
+
+}
+
+.TradingTools-Aggregator {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none !important;
+}
+
+.Aggregator_Routes,
+.Aggregator-Content {
+    height: 100vh;
+    align-items: center;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    text-decoration: none !important;
+}
+
+.Aggregator-Content-2 {
+    font-size: 16px;
+    height: 60vh;
+  
+    width : 100%;
+    
+    background-color: #1c1c1c;
+    text-decoration: none !important;
+}

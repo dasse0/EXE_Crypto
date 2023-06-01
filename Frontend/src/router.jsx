@@ -11,6 +11,9 @@ import { Routes, Route } from "react-router-dom";
 import Ec from "./view/pages/ec/ec_main/ec_main";
 
 import API_Insert from "./view/pages/api/apikeyinsert";
+import Binance_SPOT_DOM_1X from "./view/pages/binance/DOM/Binance_SPOT_DOM_1X";
+import Binance_SPOT_DOM_2X from "./view/pages/binance/DOM/Binance_SPOT_DOM_2X";
+
 import Binance_USDT_DOM_2X from "./view/pages/binance/DOM/Binance_USDT_DOM_2X";
 import Binance_USDT_DOM_4X from "./view/pages/binance/DOM/Binance_USDT_DOM_4X";
 import Binance_USDT_DOM_6X from "./view/pages/binance/DOM/Binance_USDT_DOM_6X";
@@ -23,9 +26,12 @@ import CryptoInfo from "./view/pages/ec/ec_tools/market/CryptoInfo";
 
 //========== Trading Tools ================================================================================
 import Aggregator_USDT from "./view/pages/ec/ec_tools/trading_tools/aggregators/aggregator_USDT/aggregator_USDT";
+import Aggregator_SPOT from "./view/pages/ec/ec_tools/trading_tools/aggregators/aggregator_SPOT/aggregator_SPOT";
 //=============================================================================================================
 //Binance
 //=============================================================================================================
+
+import Binance_Wallet from "./view/pages/binance/Wallet/Binance_Wallet";
 export function MainView() {
   return (
     <>
@@ -36,11 +42,20 @@ export function MainView() {
         <Route path="/EXE_Trading/Settings" element={<Settings />} />
         <Route path="/EXE_Trading/MarketOverview"element={<MarketOverview />}/>
         <Route path="/EXE_Trading/MarketOverview/CrytpoInfo"element={<CryptoInfo />}/>
+        <Route path="/EXE_Trading/TradingTools/Aggregator_SPOT" element={<Aggregator_SPOT />}/>
         <Route path="/EXE_Trading/TradingTools/Aggregator_USDT" element={<Aggregator_USDT />}/>
         <Route path="/EXE_Trading/TradingTools/Aggregator_USDT/Orders"/>
         {/*== Binance ==== API insert ===============*/}
         <Route path="/API_Insert" element={<API_Insert />} />
+        {/*== Binance ==== Wallet ===================*/}
+        <Route path="/Binance_Wallet" element={<Binance_Wallet />} />
         {/*== Binance ==== Depth of market (DOM) ====*/}
+
+
+        <Route path="/Bn_SPOT_DOM_1X" element={<Binance_SPOT_DOM_1X />} />
+        <Route path="/Bn_SPOT_DOM_2X" element={<Binance_SPOT_DOM_2X />} />
+
+
         <Route path="/Bn_USDT_DOM_2X" element={<Binance_USDT_DOM_2X />} />
         <Route path="/Bn_USDT_DOM_4X" element={<Binance_USDT_DOM_4X />} />
         <Route path="/Bn_USDT_DOM_6X" element={<Binance_USDT_DOM_6X />} />

@@ -51,6 +51,7 @@ class Binance_Symbol_USDT_Chart_3 extends React.Component {
           borderColor: "orange",
         },
         timeScale: {
+          barSpacing: 4, // width chart candlestick
           tickMarkFormatter: (time, tickMarkType, locale) => {
             const date = new Date(time * 1000);
             const hours = date.getHours();
@@ -61,7 +62,7 @@ class Binance_Symbol_USDT_Chart_3 extends React.Component {
             return formattedTime;
           },
 
-          timeVisible: true,
+          timeVisible: false,
           secondsVisible: true,
           rightOffset: 5,
           borderColor: "orange",

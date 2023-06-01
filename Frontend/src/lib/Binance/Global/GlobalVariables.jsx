@@ -174,4 +174,15 @@ export const priceFormat_6 = localStorage.getItem("ChartPriceFormat_6") || 0.1;
 
 
 export const DOM_Table_height = localStorage.getItem("DOM-Table-Height") || localStorage.setItem("DOM-Table-Height", 8);
-export const DOM_Trade_height = localStorage.getItem("DOM-Traded-Height") || localStorage.setItem("DOM-Traded-Height", 650);
+export const DOM_Trade_height = localStorage.getItem("DOM-Traded-Height") || localStorage.setItem("DOM-Traded-Height", 800);
+
+// SPOT ORDERBOOK DECIMALS
+
+export const Orderbook_Decimals_1 = localStorage.getItem("Orderbook_Decimals_1");
+export const Orderbook_Decimals_2 = localStorage.getItem("Orderbook_Decimals_2");
+
+
+// Aggregator Symbol 1 Binance Spot	
+// Only base symbol is needed, the quote symbol is always USDT or USD depends on the exchange api . Like "btc" + USDT 
+export const Aggregator_Symbol_1_spot = localStorage.getItem("Aggregator_Symbol_1_spot") || "btc";
+

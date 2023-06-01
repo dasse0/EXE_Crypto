@@ -3,7 +3,7 @@
 	background-color: #6c6c6c;
 	color: white;
 	height: 12px;
-	
+
 
 }
 
@@ -36,7 +36,7 @@
 
 .mb-3,
 .my-3 {
-	justify-content: center	;
+	justify-content: center;
 	margin-bottom: 0rem !important;
 	border: none !important;
 	overflow-x: auto !important;
@@ -48,7 +48,7 @@
 
 
 .Tab-DOM-Settings {
-	
+
 	padding: 10px;
 	justify-content: center;
 	text-align: center;
@@ -73,29 +73,29 @@
 
 stripped-table {
 	color: orange;
-	
+
 }
 
 .dom-tab-icon-settings {
 	color: #d60707;
-	
-
 	background-image: "../../../../lib/img/icons8-settings-50.png";
 	background-repeat: no-repeat;
-	
-
 	width: 20px;
 	height: 20px;
 
-	
+
 
 
 }
 
-.Tab-DOM-1-Settings, .Tab-DOM-2-Settings, .Tab-DOM-3-Settings, .Tab-DOM-4-Settings, .Tab-DOM-5-Settings, .Tab-DOM-6-Settings {
-	
+.Tab-DOM-1-Settings,
+.Tab-DOM-2-Settings,
+.Tab-DOM-3-Settings,
+.Tab-DOM-4-Settings,
+.Tab-DOM-5-Settings,
+.Tab-DOM-6-Settings {
+
 	overflow-y: auto;
-	
 	padding: 10px;
 	justify-content: center;
 	text-align: center;
@@ -103,8 +103,8 @@ stripped-table {
 
 #trades {
 	overflow-y: auto;
-	
-	max-height: 670px;
+	max-height: 800px;
+
 
 
 }

@@ -22,7 +22,7 @@ import {
 
 import "bootstrap/dist/css/bootstrap.css";
 
-import BinanceDOMUSDT5_Orders from "./Binance_DOM_5_Orders";
+
 
 export default function Binance_USDT_2() {
   const [data, setData] = useState([]);
@@ -275,34 +275,16 @@ export default function Binance_USDT_2() {
                     )}
                   </tbody>
                 </Table>
-                <Table
-                  bordered
-                  hover
-                  variant="dark"
-                  size="sm"
-                  style={{
-                    backgroundColor: "#000",
-                    color: "orange",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    borderColor: "#000",
-                  }}
-                >
-                  <thead>
-                    <tr
-                      style={{
-                        display: "grid",
-                        gridTemplateColumns: "1fr 1fr",
-                        width: "100%",
-                      }}
-                    >
-                      <th>Price</th>
-                      <th>Quantity</th>
-                    </tr>
-                  </thead>
-                  {/*  Ask Table */}
-                  <tbody>
+                <ul  style={{
+                    lineHeight: "1",
+                    fontSize: "0.8rem",                    
+                    overflowY: "hidden",
+                    textDecoration: "none",
+                    listStyle: "none",
+                    
+                    
+                  }} 
+                  >
                     {data.asks &&
                       data.asks
                         .map((asks, index) => (
@@ -353,17 +335,20 @@ export default function Binance_USDT_2() {
                         ))
                         .reverse()}
                     {/*  Put reverse here to abstain Laggy Bug */}
-                  </tbody>
-                  <tfoot
-                    style={{
-                      backgroundColor: "#777",
-                      width: "100%",
-                      height: "1px",
-                    }}
-                  ></tfoot>
+                  </ul>
+                  
 
                   {/*  Bid Table */}
-                  <tbody>
+                  <ul
+                   style={{
+                    lineHeight: "1",
+                    fontSize: "0.8rem",                    
+                    overflowY: "hidden",
+                    textDecoration: "none",
+                    listStyle: "none",
+                    
+                  }} 
+                  >
                     {data.bids &&
                       data.bids.map((bids, index) => (
                         <tr key={index}>
@@ -411,8 +396,7 @@ export default function Binance_USDT_2() {
                           </td>
                         </tr>
                       ))}
-                  </tbody>
-                </Table>
+                  </ul>
               </Resizable>
               {/*  Trade Table */}
 
@@ -433,14 +417,13 @@ export default function Binance_USDT_2() {
                   }}
                  
                 >
-                  <BinanceDOMUSDT5_Orders />
+                 
                 </div>
 
                 <ul
                   style={{
                     lineHeight: "1",
                     fontSize: "0.8rem",
-                    height: DOM_Trade_height + "px",
 
 
                     textAlign: "left",
@@ -453,7 +436,7 @@ export default function Binance_USDT_2() {
                 >
                   Traded
                   {tradeData
-                    .slice(-50, data.length)
+                    .slice(-48, data.length)
                     .map((trade, index) => (
                       <li key={index}>
                         {trade.isBuyerMaker === "B" ? (

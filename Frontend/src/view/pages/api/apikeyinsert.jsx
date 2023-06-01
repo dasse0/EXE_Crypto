@@ -1,6 +1,18 @@
 import { Sidenav, Nav } from "rsuite";
 import "rsuite/dist/rsuite-custom.css";
 
+function binance_api_key() {
+  var binance_api_key = document.getElementById("binance_api_key").value;
+  localStorage.setItem("binance_api_key", binance_api_key);
+  console.log(binance_api_key);
+}
+
+function binance_secret_key() {
+  var binance_secret_key = document.getElementById("binance_secret_key").value;
+  localStorage.setItem("binance_secret_key", binance_secret_key);
+  console.log(binance_secret_key);
+}
+
 export default function Main() {
   return (
     <>
@@ -61,7 +73,6 @@ export default function Main() {
               border: "1px solid orange",
               borderRadius: "10px",
               backgroundColor: "#000",
-              
             }}
           >
             <Sidenav.Body
@@ -77,6 +88,7 @@ export default function Main() {
                 <Nav.Menu eventKey="1" title="Binance">
                   <div
                     style={{
+                      
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",
@@ -87,24 +99,32 @@ export default function Main() {
                   >
                     Insert your API and Secret Key
                     <input
+                      id="binance_api_key"
                       type="text"
-                      placeholder="API Key"
+                      placeholder={ localStorage.getItem("binance_api_key")}
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
                     />
                     <input
+                      id="binance_secret_key"
                       type="text"
-                      placeholder="Secret Key"
+                      placeholder={ localStorage.getItem("binance_secret_key")}
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
                     />
                     <button
+                      onClick={() => {
+                        binance_api_key();
+                        binance_secret_key();
+                      }}
                       style={{
                         border: "2px solid gray",
                         backgroundColor: "#222",
@@ -133,7 +153,8 @@ export default function Main() {
                       type="text"
                       placeholder="API Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -142,7 +163,8 @@ export default function Main() {
                       type="text"
                       placeholder="Secret Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -151,7 +173,7 @@ export default function Main() {
                       style={{
                         border: "2px solid gray",
                         backgroundColor: "#222",
-                        width: "60%",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -176,7 +198,8 @@ export default function Main() {
                       type="text"
                       placeholder="API Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -185,7 +208,8 @@ export default function Main() {
                       type="text"
                       placeholder="Secret Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -194,7 +218,7 @@ export default function Main() {
                       style={{
                         border: "2px solid gray",
                         backgroundColor: "#222",
-                        width: "60%",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -219,7 +243,8 @@ export default function Main() {
                       type="text"
                       placeholder="API Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -228,7 +253,8 @@ export default function Main() {
                       type="text"
                       placeholder="Secret Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -237,7 +263,7 @@ export default function Main() {
                       style={{
                         border: "2px solid gray",
                         backgroundColor: "#222",
-                        width: "60%",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -262,7 +288,8 @@ export default function Main() {
                       type="text"
                       placeholder="API Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -271,7 +298,8 @@ export default function Main() {
                       type="text"
                       placeholder="Secret Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -280,7 +308,7 @@ export default function Main() {
                       style={{
                         border: "2px solid gray",
                         backgroundColor: "#222",
-                        width: "60%",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -305,7 +333,8 @@ export default function Main() {
                       type="text"
                       placeholder="API Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -314,7 +343,8 @@ export default function Main() {
                       type="text"
                       placeholder="Secret Key"
                       style={{
-                        width: "60%",
+                        textAlign: "center",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}
@@ -323,7 +353,7 @@ export default function Main() {
                       style={{
                         border: "2px solid gray",
                         backgroundColor: "#222",
-                        width: "60%",
+                        width: "100%",
                         height: "50px",
                         fontSize: "20px",
                       }}

@@ -8,9 +8,10 @@ class Binance_Symbol_USDT_Chart_1 extends React.Component {
     super(props);
     this.state = {
       data: [],
+
       width: 0,
       height: 0,
-      margin: { top: 20, right: 20, bottom: 30, left: 50 },
+      margin: { top: 20, right: 20, bottom: 30, left: 10 },
     };
   }
 
@@ -40,9 +41,13 @@ class Binance_Symbol_USDT_Chart_1 extends React.Component {
             color: "#222",
           },
         },
+
         crosshair: {
           mode: LightweightCharts.CrosshairMode.Normal,
         },
+
+
+
         rightPriceScale: {
           autoScale: true,
           scaleMargins: {
@@ -52,6 +57,7 @@ class Binance_Symbol_USDT_Chart_1 extends React.Component {
           borderColor: "orange",
         },
         timeScale: {
+          barSpacing: 4, // width chart candlestick
           tickMarkFormatter: (time, tickMarkType, locale) => {
             const date = new Date(time * 1000);
             const hours = date.getHours();
@@ -62,7 +68,7 @@ class Binance_Symbol_USDT_Chart_1 extends React.Component {
             return formattedTime;
           },
 
-          timeVisible: true,
+          timeVisible: false,
           secondsVisible: true,
           rightOffset: 5,
           borderColor: "orange",
@@ -162,41 +168,39 @@ class Binance_Symbol_USDT_Chart_1 extends React.Component {
         volumeSeries.setData(volume);
       });
 
-      
-    function resize() {
-      const width = getSelection(
-        document.querySelector(".BinanceCandlestickChart_1")
-      ).width;
-      const height = getSelection(
-        document.querySelector(".BinanceCandlestickChart_1")
-      ).height;
-
-      chart.resize(width, height);
-    }
-
-    window.addEventListener("resize", resize);
-
-
-
-
-    function getSelection(el) {
-      let width = 0;
-      let height = 0;
-      if (typeof el.getBoundingClientRect === "function") {
-        const rect = el.getBoundingClientRect();
-        width = rect.width;
-
-        height = rect.height;
-      } else {
-        width = el.offsetWidth;
-
-        height = el.offsetHeight;
+      function resize() {
+        const width = getSelection(
+          document.querySelector(".BinanceCandlestickChart_1")
+        ).width;
+        const height = getSelection(
+          document.querySelector(".BinanceCandlestickChart_1")
+        ).height;
+  
+        chart.resize(width, height);
       }
-      return { width, height };
+  
+      window.addEventListener("resize", resize);
+
+      function getSelection(el) {
+        let width = 0;
+        let height = 0;
+        if (typeof el.getBoundingClientRect === "function") {
+          const rect = el.getBoundingClientRect();
+          width = rect.width;
+  
+          height = rect.height;
+        } else {
+          width = el.offsetWidth;
+  
+          height = el.offsetHeight;
+        }
+        return { width, height };
+      }
     }
-  }
 
 
+  
+  
   render() {
     return (
       <div>

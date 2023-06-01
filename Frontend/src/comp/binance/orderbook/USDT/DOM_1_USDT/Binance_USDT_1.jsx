@@ -23,7 +23,6 @@ import {
 
 import "bootstrap/dist/css/bootstrap.css";
 
-import BinanceDOMUSDT1_Orders from "./Binance_DOM_1_Orders";
 import BinanceDOMUSDT1_Chart from "../../../charts/Candlestick/Bn_Candlestick_Chart_USDT_1";
 
 export default function Binance_USDT_1() {
@@ -210,7 +209,6 @@ export default function Binance_USDT_1() {
                   maxheight: "52vh",
                   overflowY: "hidden",
                   overflowX: "hidden",
-                  
                 }}
               >
                 {/* Ticker Stream*/}
@@ -220,7 +218,6 @@ export default function Binance_USDT_1() {
                   size="sm"
                   style={{
                     color: "orange",
-                    
                   }}
                 >
                   <thead>
@@ -282,106 +279,27 @@ export default function Binance_USDT_1() {
                   </tbody>
                 </Table>
 
-                <Table
-                  bordered
-                  hover
-                  variant="dark"
-                  size="sm"
+                <ul
                   style={{
-                    backgroundColor: "#000",
-                    color: "orange",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    borderColor: "#000",
+                    lineHeight: "1",
+                    fontSize: "0.8rem",
+                    overflowY: "hidden",
+                    textDecoration: "none",
+                    listStyle: "none",
                   }}
                 >
-                  <thead>
-                    <tr
-                      style={{
-                        display: "grid",
-                        gridTemplateColumns: "1fr 1fr",
-                        width: "100%",
-                      }}
-                    >
-                      <th>Price</th>
-                      <th>Quantity</th>
-                    </tr>
-                  </thead>
-                  {/*  Ask Table */}
-                  <tbody>
-                    {data.asks &&
-                      data.asks
-                        .map((asks, index) => (
-                          <tr key={index}>
-                            <td
-                              style={{
-                                color: "red",
-                                width: "50vw",
-                                cursor: "pointer",
-                              }}
-                            >
-                              {asks.price}
-                            </td>
-                            <td
-                              style={{
-                                width: "50%",
-                                cursor: "pointer",
-                              }}
-                            >
-                              {asks.quantity >
-                              DOM_1_BinanceQuantityFilter_high ? (
-                                <span
-                                  style={{
-                                    backgroundColor: "darkred",
-                                    color: "white",
-                                    paddingLeft: "5px",
-                                    paddingRight: "5px",
-                                  }}
-                                >
-                                  {asks.quantity}
-                                </span>
-                              ) : asks.quantity >
-                                DOM_1_BinanceQuantityFilter_low ? (
-                                <span
-                                  style={{
-                                    color: "red",
-                                    paddingLeft: "5px",
-                                    paddingRight: "5px",
-                                  }}
-                                >
-                                  {asks.quantity}
-                                </span>
-                              ) : (
-                                <span>{asks.quantity}</span>
-                              )}
-                            </td>
-                          </tr>
-                        ))
-                        .reverse()}
-                    {/*  Put reverse here to abstain Laggy Bug */}
-                  </tbody>
-                  <tfoot
-                    style={{
-                      backgroundColor: "#777",
-                      width: "100%",
-                      height: "1px",
-                    }}
-                  ></tfoot>
-
-                  {/*  Bid Table */}
-                  <tbody>
-                    {data.bids &&
-                      data.bids.map((bids, index) => (
+                  {data.asks &&
+                    data.asks
+                      .map((asks, index) => (
                         <tr key={index}>
                           <td
                             style={{
-                              color: "cyan",
+                              color: "red",
                               width: "50vw",
                               cursor: "pointer",
                             }}
                           >
-                            {bids.price}
+                            {asks.price}
                           </td>
                           <td
                             style={{
@@ -389,67 +307,120 @@ export default function Binance_USDT_1() {
                               cursor: "pointer",
                             }}
                           >
-                            {bids.quantity >
+                            {asks.quantity >
                             DOM_1_BinanceQuantityFilter_high ? (
                               <span
                                 style={{
-                                  backgroundColor: "blue",
+                                  backgroundColor: "darkred",
                                   color: "white",
                                   paddingLeft: "5px",
                                   paddingRight: "5px",
                                 }}
                               >
-                                {bids.quantity}
+                                {asks.quantity}
                               </span>
-                            ) : bids.quantity >
+                            ) : asks.quantity >
                               DOM_1_BinanceQuantityFilter_low ? (
                               <span
                                 style={{
-                                  color: "cyan",
+                                  color: "red",
                                   paddingLeft: "5px",
                                   paddingRight: "5px",
                                 }}
                               >
-                                {bids.quantity}
+                                {asks.quantity}
                               </span>
                             ) : (
-                              <span>{bids.quantity}</span>
+                              <span>{asks.quantity}</span>
                             )}
                           </td>
                         </tr>
-                      ))}
-                  </tbody>
-                </Table>
+                      ))
+                      .reverse()}
+                  {/*  Put reverse here to abstain Laggy Bug */}
+                </ul>
+
+                {/*  Bid Table */}
+                <ul
+                  style={{
+                    lineHeight: "1",
+                    fontSize: "0.8rem",
+                    overflowY: "hidden",
+                    textDecoration: "none",
+                    listStyle: "none",
+                  }}
+                >
+                  {data.bids &&
+                    data.bids.map((bids, index) => (
+                      <tr key={index}>
+                        <td
+                          style={{
+                            color: "cyan",
+                            width: "50vw",
+                            cursor: "pointer",
+                          }}
+                        >
+                          {bids.price}
+                        </td>
+                        <td
+                          style={{
+                            width: "50%",
+                            cursor: "pointer",
+                          }}
+                        >
+                          {bids.quantity > DOM_1_BinanceQuantityFilter_high ? (
+                            <span
+                              style={{
+                                backgroundColor: "blue",
+                                color: "white",
+                                paddingLeft: "5px",
+                                paddingRight: "5px",
+                              }}
+                            >
+                              {bids.quantity}
+                            </span>
+                          ) : bids.quantity >
+                            DOM_1_BinanceQuantityFilter_low ? (
+                            <span
+                              style={{
+                                color: "cyan",
+                                paddingLeft: "5px",
+                                paddingRight: "5px",
+                              }}
+                            >
+                              {bids.quantity}
+                            </span>
+                          ) : (
+                            <span>{bids.quantity}</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                </ul>
               </Resizable>
               {/*  Trade Table */}
               <div
                 style={{
                   width: "100%",
-                  
                 }}
               >
                 <div
                   style={{
-                    
                     backgroundColor: "#222",
 
                     width: "100%",
                     textAlign: "left",
-                    overflowY: "auto",
+                    overflow: "hidden",
                     textDecoration: "none",
                     listStyle: "none",
                   }}
-                 
-                >
-                  <BinanceDOMUSDT1_Orders />
-                </div>
+                ></div>
 
                 <ul
                   style={{
                     lineHeight: "1",
-                    fontSize: "0.8rem",                    
-                    height: DOM_Trade_height + "px",
-                    
+                    fontSize: "0.8rem",
+
                     textAlign: "left",
                     overflowY: "hidden",
                     textDecoration: "none",
@@ -460,7 +431,7 @@ export default function Binance_USDT_1() {
                 >
                   Traded
                   {tradeData
-                    .slice(-50, data.length)
+                    .slice(-48, data.length)
                     .map((trade, index) => (
                       <li key={index}>
                         {trade.isBuyerMaker === "B" ? (
@@ -607,11 +578,11 @@ export default function Binance_USDT_1() {
             <TabContent className="Tab-DOM-1-Settings">
               <br />
               <button
-              style={{
-                color: "white",
-                backgroundColor: "black",
-                border: "1px solid cyan",
-              }}
+                style={{
+                  color: "white",
+                  backgroundColor: "black",
+                  border: "1px solid cyan",
+                }}
                 onClick={() => {
                   window.location.reload();
                 }}
@@ -621,11 +592,11 @@ export default function Binance_USDT_1() {
               <br />
               <br />
               <button
-              style={{
-                color: "white",
-                backgroundColor: "black",
-                border: "1px solid red",
-              }}
+                style={{
+                  color: "white",
+                  backgroundColor: "black",
+                  border: "1px solid red",
+                }}
                 onClick={() => {
                   localStorage.clear();
                   window.location.reload();

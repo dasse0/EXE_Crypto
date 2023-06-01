@@ -151,62 +151,45 @@ export default class Main extends React.Component {
           </div>
           <div
             style={{
-              height: "95vh",
               display: "grid",
-              gridTemplateColumns: "repeat(4, 4fr)",
-              gridTemplateRows: "repeat(2, 2fr)",
-
-              gridAutoFlow: "column",
-
-              //row
-
-              backgroundColor: "#000",
+              gridTemplateColumns: "1fr 1fr 1fr 1fr",
+              height: "50vh",
             }}
           >
-            <div>
-              <BinanceDOMUSDT1
-                className="Binance_USDT_DOM-1"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_1">
+            <BinanceDOMUSDT1 />
+            <BinanceDOMUSDT2 />
+            <BinanceDOMUSDT3 />
+            <BinanceDOMUSDT4 />
+            <div
+              className="BinanceCandlestickChart_1"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT1_Chart />
             </div>
-            {/*  Put "<>" and then div to prevent the ticker trade bug, It solves the double print bug.  */}
-
-            <div>
-              <BinanceDOMUSDT2
-                className="Binance_USDT_DOM-2"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_2">
+            <div
+              className="BinanceCandlestickChart_2"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT2_Chart />
             </div>
-            <div>
-              <BinanceDOMUSDT3
-                className="Binance_USDT_DOM-3"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_3">
+            <div
+              className="BinanceCandlestickChart_3"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT3_Chart />
             </div>
-            <div>
-              <BinanceDOMUSDT4
-                className="Binance_USDT_DOM-4"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_4">
+            <div
+              className="BinanceCandlestickChart_4"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT4_Chart />
             </div>
           </div>

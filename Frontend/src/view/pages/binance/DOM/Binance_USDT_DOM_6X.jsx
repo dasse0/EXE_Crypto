@@ -153,92 +153,66 @@ export default class Main extends React.Component {
               </div>
             </div>
           </div>
+
           <div
             style={{
-              height: "95vh",
               display: "grid",
-              gridTemplateColumns: "repeat(6, 6fr)",
-              gridTemplateRows: "repeat(2, 2fr)",
-
-              gridAutoFlow: "column",
-
-              //row
-
-              backgroundColor: "#000",
+              gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
+              height: "50vh",
             }}
           >
-            {/* ===================1====================== */}
-            <div>
-              <BinanceDOMUSDT1
-                className="Binance_USDT_DOM-1"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_1">
+            <BinanceDOMUSDT1 />
+            <BinanceDOMUSDT2 />
+            <BinanceDOMUSDT3 />
+            <BinanceDOMUSDT4 />
+            <BinanceDOMUSDT5 />
+            <BinanceDOMUSDT6 />
+            <div
+              className="BinanceCandlestickChart_1"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT1_Chart />
             </div>
-
-            {/* ===================2====================== */}
-            <div>
-              <BinanceDOMUSDT2
-                className="Binance_USDT_DOM-2"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_2">
+            <div
+              className="BinanceCandlestickChart_2"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT2_Chart />
             </div>
-
-            {/* ===================3====================== */}
-            <div>
-              <BinanceDOMUSDT3
-                className="Binance_USDT_DOM-3"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_3">
+            <div
+              className="BinanceCandlestickChart_3"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT3_Chart />
             </div>
-            {/* ===================4====================== */}
-            <div>
-              <BinanceDOMUSDT4
-                className="Binance_USDT_DOM-4"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_4">
+            <div
+              className="BinanceCandlestickChart_4"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT4_Chart />
             </div>
-            {/* ===================5====================== */}
-            <div>
-              <BinanceDOMUSDT5
-                className="Binance_USDT_DOM-5"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_5">
+            <div
+              className="BinanceCandlestickChart_5"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT5_Chart />
             </div>
-            {/* ===================6====================== */}
-            <div>
-              <BinanceDOMUSDT6
-                className="Binance_USDT_DOM-6"
-                style={{
-                  width: "50vh",
-                }}
-              />
-            </div>
-            <div className="BinanceCandlestickChart_6">
+            <div
+              className="BinanceCandlestickChart_6"
+              style={{
+                height: "100vh",
+              }}
+            >
               <BinanceDOMUSDT6_Chart />
             </div>
           </div>

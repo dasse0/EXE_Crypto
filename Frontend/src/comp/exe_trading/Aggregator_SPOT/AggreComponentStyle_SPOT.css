@@ -1,0 +1,28 @@
+tr {
+    line-height: 1;
+    text-align: left;
+   
+}
+
+.coinbase_agg {
+    display: flex;
+
+
+   
+    max-height: 1000px;
+
+
+    overflow-y: auto;
+
+    color: orange;
+    padding: 10px;
+
+
+}
+
+.order_seperator {
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}

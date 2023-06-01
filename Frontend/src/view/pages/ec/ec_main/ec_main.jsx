@@ -101,9 +101,10 @@ export default function Startpage() {
               <Nav.Menu eventKey="4" title="Trading Tools">
                 {/* ======= EXE Crypto = Aggregators ========================== */}
                 <Nav.Menu eventKey="4-1" title="Aggregators">
-                  <Nav.Menu
+                                    
+                <Nav.Menu
                     eventKey="4-1-1"
-                    title="USDT"
+                    title="SPOT"
                     style={{
                       textDecoration: "none",
                       backgroundColor: "#444",
@@ -117,6 +118,45 @@ export default function Startpage() {
                       }}
                       onClick={() => {
                         window.location.href =
+                          "/EXE_Trading/TradingTools/Aggregator_SPOT";
+                      }}
+                    >
+                      Aggregator
+                    </Nav.Item>
+
+                    {/* change address to /EXE_Trading/Aggregator_SPOT/Settings 20203/05/14 */}
+
+                    <Nav.Item
+                      eventKey="4-1-1-2"
+                      style={{
+                        textDecoration: "none",
+                        backgroundColor: "#555",
+                      }}
+                      onClick={() => {
+                        window.location.href =
+                          "/EXE_Trading/Aggregator_USDT/Settings";
+                      }}
+                    >
+                      Dual Aggregator
+                    </Nav.Item>
+                  </Nav.Menu>
+
+                  <Nav.Menu
+                    eventKey="5-1-1"
+                    title="USDT"
+                    style={{
+                      textDecoration: "none",
+                      backgroundColor: "#444",
+                    }}
+                  >
+                    <Nav.Item
+                      eventKey="5-1-1-1"
+                      style={{
+                        textDecoration: "none",
+                        backgroundColor: "#555",
+                      }}
+                      onClick={() => {
+                        window.location.href =
                           "/EXE_Trading/TradingTools/Aggregator_USDT";
                       }}
                     >
@@ -124,7 +164,7 @@ export default function Startpage() {
                     </Nav.Item>
 
                     <Nav.Item
-                      eventKey="4-1-1-2"
+                      eventKey="5-1-1-2"
                       style={{
                         textDecoration: "none",
                         backgroundColor: "#555",
@@ -159,7 +199,7 @@ export default function Startpage() {
       >
         <Sidenav
           appearance="inverse"
-          defaultOpenKeys={["3", "4"]}
+          defaultOpenKeys={["2"]}
           style={{
             backgroundColor: "#191919",
 
@@ -185,17 +225,63 @@ export default function Startpage() {
               >
                 Exchange
               </Nav.Item>
+              {/* ===================== Binance EXCHANGE ============================= */}
               <Nav.Menu
                 eventKey="2"
                 title="Binance"
                 style={{ textDecoration: "none", backgroundColor: "#191919" }}
               >
                 <Nav.Item
+
+                  onClick={() => {
+                    window.location.href = "/Binance_Wallet";
+                  }}
                   eventKey="2-1"
                   style={{ textDecoration: "none", backgroundColor: "#615" }}
                 >
                   Wallet
                 </Nav.Item>
+                <Nav.Menu
+                  eventKey="1-1"
+                  title="SPOT"
+                  style={{ textDecoration: "none", backgroundColor: "#339" }}
+                >
+                  <Nav.Menu
+                    eventKey="1-1-1"
+                    title="Depth of Market (DOM)"
+                    style={{
+                      textDecoration: "none",
+                      backgroundColor: "#333",
+                    }}
+                  >
+                    <Nav.Item
+                      style={{
+                        textDecoration: "none",
+                        backgroundColor: "#222",
+                      }}
+                      eventKey="1-1-1"
+                      onClick={() => {
+                        window.location.href = "/Bn_SPOT_DOM_1X";
+                      }}
+                    >
+                      DOM 1X
+                    </Nav.Item>
+                    <Nav.Item
+                      style={{
+                        textDecoration: "none",
+                        backgroundColor: "#222",
+                      }}
+                      eventKey="1-1-2"
+                      onClick={() => {
+                        window.location.href = "/Bn_SPOT_DOM_2X";
+                      }}
+                    >
+                      DOM 2X
+                    </Nav.Item>
+                
+                
+                  </Nav.Menu>
+                </Nav.Menu>
                 <Nav.Menu
                   eventKey="2-1"
                   title="USD-M Futures"

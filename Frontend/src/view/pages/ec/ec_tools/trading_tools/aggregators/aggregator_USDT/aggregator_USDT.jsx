@@ -8,8 +8,7 @@ import GroupIcon from "@rsuite/icons/legacy/Group";
 import MagicIcon from "@rsuite/icons/legacy/Magic";
 import GearCircleIcon from "@rsuite/icons/legacy/GearCircle";
 import "rsuite/dist/rsuite-custom.css";
-import Bn_AggreComponent_USDT from "../../../../../../../comp/binance/orderbook/Aggregator_USDT/AggreComponent_USDT";
-
+import Bn_AggreComponent_USDT from "../../../../../../../comp/exe_trading/Aggregator_USDT/AggreComponent_USDT";
 export default function Aggregator_USDT() {
   return (
     <div className="TradingTools-Aggregator">

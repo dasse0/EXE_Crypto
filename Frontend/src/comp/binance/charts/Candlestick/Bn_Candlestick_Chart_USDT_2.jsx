@@ -3,30 +3,35 @@ import * as LightweightCharts from "lightweight-charts";
 
 import { binance_symbol_2 } from "../../../../lib/Binance/Global/GlobalVariables";
 
-
 class Binance_Symbol_USDT_Chart_2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
+
       width: 0,
       height: 0,
-      margin: { top: 20, right: 20, bottom: 30, left: 50 },
+      margin: { top: 20, right: 20, bottom: 30, left: 10 },
     };
+    
+
+    
   }
+
 
   componentDidMount() {
     const priceFormat = localStorage.getItem("ChartPriceFormat_2") || 0.01;
 
-
     const chart = LightweightCharts.createChart(
       document.querySelector(".BinanceCandlestickChart_2"),
       {
-        width: getSelection(document.querySelector(".BinanceCandlestickChart_2"))
-          .width,
+        width: getSelection(
+          document.querySelector(".BinanceCandlestickChart_2")
+        ).width,
 
-        height: getSelection(document.querySelector(".BinanceCandlestickChart_2"))
-          .height,
+        height: getSelection(
+          document.querySelector(".BinanceCandlestickChart_2")
+        ).height,
         overlayPriceScales: true,
         layout: {
           backgroundColor: "#000000",
@@ -53,6 +58,7 @@ class Binance_Symbol_USDT_Chart_2 extends React.Component {
           borderColor: "orange",
         },
         timeScale: {
+          barSpacing: 4, // width chart candlestick
           tickMarkFormatter: (time, tickMarkType, locale) => {
             const date = new Date(time * 1000);
             const hours = date.getHours();
@@ -63,7 +69,7 @@ class Binance_Symbol_USDT_Chart_2 extends React.Component {
             return formattedTime;
           },
 
-          timeVisible: true,
+          timeVisible: false,
           secondsVisible: true,
           rightOffset: 5,
           borderColor: "orange",
@@ -137,9 +143,10 @@ class Binance_Symbol_USDT_Chart_2 extends React.Component {
 
     //get historical data
     fetch(
-      "https://fapi.binance.com/fapi/v1/klines?symbol=" + binance_symbol_2 + "&interval=1m&limit=1000" 
+      "https://fapi.binance.com/fapi/v1/klines?symbol=" +
+        binance_symbol_2 +
+        "&interval=1m&limit=1000"
     )
-      
       .then((response) => response.json())
       .then((data) => {
         const ohlc = data.map((x) => {
@@ -163,47 +170,41 @@ class Binance_Symbol_USDT_Chart_2 extends React.Component {
         volumeSeries.setData(volume);
       });
 
-      
-    function resize() {
-      const width = getSelection(
-        document.querySelector(".BinanceCandlestickChart_2")
-      ).width;
-      const height = getSelection(
-        document.querySelector(".BinanceCandlestickChart_2")
-      ).height;
-
-      chart.resize(width, height);
-    }
-
-    window.addEventListener("resize", resize);
-
-
-
-
-    function getSelection(el) {
-      let width = 0;
-      let height = 0;
-      if (typeof el.getBoundingClientRect === "function") {
-        const rect = el.getBoundingClientRect();
-        width = rect.width;
-
-        height = rect.height;
-      } else {
-        width = el.offsetWidth;
-
-        height = el.offsetHeight;
+      function resize() {
+        const width = getSelection(
+          document.querySelector(".BinanceCandlestickChart_1")
+        ).width;
+        const height = getSelection(
+          document.querySelector(".BinanceCandlestickChart_1")
+        ).height;
+  
+        chart.resize(width, height);
       }
-      return { width, height };
+  
+      window.addEventListener("resize", resize);
+
+      function getSelection(el) {
+        let width = 0;
+        let height = 0;
+        if (typeof el.getBoundingClientRect === "function") {
+          const rect = el.getBoundingClientRect();
+          width = rect.width;
+  
+          height = rect.height;
+        } else {
+          width = el.offsetWidth;
+  
+          height = el.offsetHeight;
+        }
+        return { width, height };
+      }
     }
-  }
 
 
 
   render() {
     return (
       <div>
-  
-       
         <div className="BinanceCandlestickChart_2"></div>
       </div>
     );

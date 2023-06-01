@@ -1,0 +1,51 @@
+.Binance_Wallet_AllCoins_div {
+    padding: 20px;
+    background-color: rgb(40, 40, 40);
+
+
+
+    width: fit-content;
+    height: fit-content;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 60vh;
+    width: 100%;
+    border: 1px solid rgb(115, 115, 115);
+}
+
+.Binance_Wallet_AllCoins_Table {
+    text-align: left;
+
+    color: orange;
+    border: 1px solid rgb(50, 50, 50);
+    line-height: 0.05;
+
+}
+
+.Binance_Wallet_AllCoins_navbar {
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    height: 50px;
+    width: 100%;
+
+
+}
+
+.Binance_Wallet_AllCoins_navbar_buttons {
+    font-size: larger;
+    margin-left: 10px;
+    border: 1px solid rgb(50, 50, 50);
+    height: 30px;
+    background-color: rgb(50, 50, 50);
+}
+
+th {
+    text-align: center;
+    
+
+}
+

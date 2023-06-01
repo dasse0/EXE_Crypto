@@ -149,7 +149,7 @@ export default function Settings() {
         <button
           onClick={() => {
             localStorage.setItem("DOM-Table-Height", 8);
-            localStorage.setItem("DOM-Traded-Height", 650);
+            localStorage.setItem("DOM-Traded-Height", 800);
             window.history.back();
           }}
           style={{
