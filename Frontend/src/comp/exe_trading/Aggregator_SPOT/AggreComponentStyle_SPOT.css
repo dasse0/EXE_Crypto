@@ -5,8 +5,7 @@ tr {
 }
 
 .coinbase_agg {
-    display: flex;
-
+    
 
    
     max-height: 1000px;
@@ -16,6 +15,12 @@ tr {
 
     color: orange;
     padding: 10px;
+
+    justify-self: stretch;
+
+  
+    
+
 
 
 }
