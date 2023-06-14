@@ -82,7 +82,7 @@ export default function CryptoInfo() {
         textDecoration: "none",
         color: "red",
        }}
-       href="/EXE_Trading/MarketOverview"
+       href="/EXE_Trading"
       >
        Back
       </a>

@@ -40,7 +40,14 @@ export default function Cryptolist() {
     color: "orange",
     textAlign: "left",
     height: "100vh",
-    width: "100vw",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "stretch",
+    alignItems: "stretch",
+
+
+
+
     overflow: "hidden",
     overflowY: "scroll",
    }}
@@ -68,18 +75,7 @@ export default function Cryptolist() {
        listStyle: "none",
       }}
      >
-      <li>
-       <a
-        style={{
-         textDecoration: "none",
-         color: "red",
-        }}
-        href="/EXE_Trading/"
-       >
-        Back
-       </a>
-      </li>
-      
+
       <div
        style={{
         paddingLeft: "100px",
@@ -96,7 +92,7 @@ export default function Cryptolist() {
          textAlign: "center",
         }}
         type="text"
-        placeholder="Page"
+        placeholder="Page Num"
        />
 
        <button
@@ -106,6 +102,7 @@ export default function Cryptolist() {
          marginLeft: "10px",
         }}
         onClick={() => {
+          window.location.reload();
          localStorage.setItem(
           "CryptoListPage",
           document.getElementById("CryptoListPage").value
@@ -142,42 +139,7 @@ export default function Cryptolist() {
        textAlign: "center",
       }}
      >
-      <th
-       style={{
-        width: "0.5%",
-       }}
-      >
-       <div
-        style={{
-         width: "100%",
-         display: "flex",
-         justifyContent: "center",
-        }}
-       >
-        &nbsp;
-        <button
-         onClick={() => {
-          const symbolSorted = [...userlist].sort(
-           (a, b) => a.last_updated > b.last_updated
-          );
-          setUserList(symbolSorted);
-         }}
-        >
-         &#8593;
-        </button>
-        <button
-         onClick={() => {
-          const symbolSorted = [...userlist].sort(
-           (a, b) => a.last_updated < b.last_updated
-          );
-          setUserList(symbolSorted);
-         }}
-        >
-         &#8595;
-        </button>
-       </div>
-       Last Updated
-      </th>
+
       <th
        style={{
         width: "0.01%",
@@ -676,7 +638,7 @@ export default function Cryptolist() {
        }}
        key={user.id}
       >
-       <td>{user.last_updated}</td>
+
        <td>{user.market_cap_rank}</td>
        <td
         style={{

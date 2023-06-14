@@ -105,14 +105,14 @@ class BybitOrderbook extends Component {
 
 
   }
-
-  componentDidUpdate() {
-    if (this.state.prevValue !== this.state.asks) {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.asks !== this.state.asks) {
       this.setState({
         prevValue: this.state.asks,
       });
     }
   }
+  
   
 
 
