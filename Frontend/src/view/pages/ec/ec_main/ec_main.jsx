@@ -11,7 +11,6 @@ import "rsuite/dist/rsuite-custom.css";
 
 import MarketOverview from "../ec_tools/market/Cryptolist";
 
-
 export default function Startpage() {
   return (
     <div className="ec_main">
@@ -85,25 +84,24 @@ export default function Startpage() {
               >
                 Settings
               </Nav.Item>
-              <Nav.Item eventKey="3"
+              <Nav.Item
+                eventKey="3"
                 style={{ textDecoration: "none", backgroundColor: "#146" }}
                 onClick={() => {
                   window.location.href = "/Binance_Wallet";
                 }}
-              
-              > Wallet
-                
+              >
+                {" "}
+                Wallet
               </Nav.Item>
 
               {/* ======= EXE Crypto = Market ========================== */}
 
-         
               <Nav.Menu eventKey="1" title="Trading Tools">
                 {/* ======= EXE Crypto = Aggregators ========================== */}
                 <Nav.Menu eventKey="1-1" title="Orderbooks">
                   <Nav.Menu
                     eventKey="1-1-1"
-
                     title="SPOT"
                     style={{
                       textDecoration: "none",
@@ -111,31 +109,26 @@ export default function Startpage() {
                     }}
                   >
                     <Nav.Item
-
                       eventKey="1-1-1-1"
                       style={{
                         textDecoration: "none",
                         backgroundColor: "#555",
                       }}
                       onClick={() => {
-                        window.location.href =
-                          "/Bn_SPOT_DOM_1X";
+                        window.location.href = "/Bn_SPOT_DOM_1X";
                       }}
                     >
                       1X
                     </Nav.Item>
-                      
-                    <Nav.Item
 
+                    <Nav.Item
                       eventKey="1-1-1-2"
                       style={{
                         textDecoration: "none",
                         backgroundColor: "#555",
                       }}
                       onClick={() => {
-                        window.location.href =
-
-                          "/Bn_SPOT_DOM_2X";
+                        window.location.href = "/Bn_SPOT_DOM_2X";
                       }}
                     >
                       2X
@@ -151,50 +144,61 @@ export default function Startpage() {
                     }}
                   >
                     <Nav.Item
-
                       eventKey="1-1-2-1"
                       style={{
                         textDecoration: "none",
                         backgroundColor: "#555",
                       }}
                       onClick={() => {
-                        window.location.href =
-
-                          "/Bn_USDT_DOM_1X";
+                        window.location.href = "/Bn_USDT_DOM_1X";
                       }}
                     >
                       1X
                     </Nav.Item>
-                      
-                    <Nav.Item
 
-                      
-                      eventKey="1-1-2-2"  
+                    <Nav.Item
+                      eventKey="1-1-2-2"
                       style={{
                         textDecoration: "none",
                         backgroundColor: "#555",
                       }}
                       onClick={() => {
-                        window.location.href =
-
-
-                          "/Bn_USDT_DOM_2X";
+                        window.location.href = "/Bn_USDT_DOM_2X";
                       }}
                     >
-
                       2X
                     </Nav.Item>
 
-                    </Nav.Menu>
+                    <Nav.Item
+                      eventKey="1-1-2-3"
+                      style={{
+                        textDecoration: "none",
+                        backgroundColor: "#555",
+                      }}
+                      onClick={() => {
+                        window.location.href = "/Bn_USDT_DOM_4X";
+                      }}
+                    >
+                      4X
+                    </Nav.Item>
 
-
+                    <Nav.Item
+                      eventKey="1-1-2-4"
+                      style={{
+                        textDecoration: "none",
+                        backgroundColor: "#555",
+                      }}
+                      onClick={() => {
+                        window.location.href = "/Bn_USDT_DOM_6X";
+                      }}
+                    >
+                      6X
+                    </Nav.Item>
                   </Nav.Menu>
-
-
+                </Nav.Menu>
 
                 <Nav.Menu eventKey="2-1" title="Aggregators">
-                                    
-                <Nav.Menu
+                  <Nav.Menu
                     eventKey="2-1-1"
                     title="SPOT"
                     style={{
@@ -281,21 +285,15 @@ export default function Startpage() {
       <div
         className="EXE_Crypto_MARKET" // EXE Crypto Market
         style={{
-         
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           height: "100vh",
           width: "100%",
-   
-     
         }}
       >
-      <MarketOverview />
-
-        </div>
-
-
+        <MarketOverview />
+      </div>
     </div>
   );
 }

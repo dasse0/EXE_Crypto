@@ -36,26 +36,34 @@ export function MainView() {
   return (
     <>
       <Routes>
-
         <Route path="/" element={<Login />} />
         <Route path="/EXE_Trading" element={<Ec />} />
         <Route path="/EXE_Trading/Settings" element={<Settings />} />
-        <Route path="/EXE_Trading/MarketOverview"element={<MarketOverview />}/>
-        <Route path="/EXE_Trading/MarketOverview/CrytpoInfo"element={<CryptoInfo />}/>
-        <Route path="/EXE_Trading/TradingTools/Aggregator_SPOT" element={<Aggregator_SPOT />}/>
-        <Route path="/EXE_Trading/TradingTools/Aggregator_USDT" element={<Aggregator_USDT />}/>
-        <Route path="/EXE_Trading/TradingTools/Aggregator_USDT/Orders"/>
+        <Route
+          path="/EXE_Trading/MarketOverview"
+          element={<MarketOverview />}
+        />
+        <Route
+          path="/EXE_Trading/MarketOverview/CrytpoInfo"
+          element={<CryptoInfo />}
+        />
+        <Route
+          path="/EXE_Trading/TradingTools/Aggregator_SPOT"
+          element={<Aggregator_SPOT />}
+        />
+        <Route
+          path="/EXE_Trading/TradingTools/Aggregator_USDT"
+          element={<Aggregator_USDT />}
+        />
+        <Route path="/EXE_Trading/TradingTools/Aggregator_USDT/Orders" />
         {/*== Binance ==== API insert ===============*/}
         <Route path="/API_Insert" element={<API_Insert />} />
         {/*== Binance ==== Wallet ===================*/}
         <Route path="/Binance_Wallet" element={<Binance_Wallet />} />
         {/*== Binance ==== Depth of market (DOM) ====*/}
 
-
         <Route path="/Bn_SPOT_DOM_1X" element={<Binance_SPOT_DOM_1X />} />
         <Route path="/Bn_SPOT_DOM_2X" element={<Binance_SPOT_DOM_2X />} />
-
-
         <Route path="/Bn_USDT_DOM_2X" element={<Binance_USDT_DOM_2X />} />
         <Route path="/Bn_USDT_DOM_4X" element={<Binance_USDT_DOM_4X />} />
         <Route path="/Bn_USDT_DOM_6X" element={<Binance_USDT_DOM_6X />} />
