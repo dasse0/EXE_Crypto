@@ -281,7 +281,7 @@ export default function Binance_USDT_1() {
 
                 <ul
                   style={{
-                    lineHeight: "1",
+                    
                     fontSize: "0.8rem",
                     overflowY: "hidden",
                     textDecoration: "none",
@@ -343,7 +343,7 @@ export default function Binance_USDT_1() {
                 {/*  Bid Table */}
                 <ul
                   style={{
-                    lineHeight: "1",
+                    
                     fontSize: "0.8rem",
                     overflowY: "hidden",
                     textDecoration: "none",

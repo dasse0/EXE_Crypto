@@ -15,6 +15,8 @@ import BinanceDOMUSDT4_Chart from "../../../../comp/binance/charts/Candlestick/B
 import BinanceDOMUSDT5_Chart from "../../../../comp/binance/charts/Candlestick/Bn_Candlestick_Chart_USDT_5";
 import BinanceDOMUSDT6_Chart from "../../../../comp/binance/charts/Candlestick/Bn_Candlestick_Chart_USDT_6";
 
+import "../../../../comp/binance/charts/Candlestick/Bn_CandlestickChart.css";
+
 export default class Main extends React.Component {
   render() {
     return (
@@ -161,60 +163,49 @@ export default class Main extends React.Component {
               height: "50vh",
             }}
           >
+ 
+            <div
+              className="BinanceCandlestickChart_1"
+
+            >
+              <BinanceDOMUSDT1_Chart />
+            </div>
+            <div
+              className="BinanceCandlestickChart_2"
+
+            >
+              <BinanceDOMUSDT2_Chart />
+            </div>
+            <div
+              className="BinanceCandlestickChart_3"
+
+            >
+              <BinanceDOMUSDT3_Chart />
+            </div>
+            <div
+              className="BinanceCandlestickChart_4"
+
+            >
+              <BinanceDOMUSDT4_Chart />
+            </div>
+            <div
+              className="BinanceCandlestickChart_5"
+
+            >
+              <BinanceDOMUSDT5_Chart />
+            </div>
+            <div
+              className="BinanceCandlestickChart_6"
+
+            >
+              <BinanceDOMUSDT6_Chart />
+            </div>
             <BinanceDOMUSDT1 />
             <BinanceDOMUSDT2 />
             <BinanceDOMUSDT3 />
             <BinanceDOMUSDT4 />
             <BinanceDOMUSDT5 />
             <BinanceDOMUSDT6 />
-            <div
-              className="BinanceCandlestickChart_1"
-              style={{
-                height: "100vh",
-              }}
-            >
-              <BinanceDOMUSDT1_Chart />
-            </div>
-            <div
-              className="BinanceCandlestickChart_2"
-              style={{
-                height: "100vh",
-              }}
-            >
-              <BinanceDOMUSDT2_Chart />
-            </div>
-            <div
-              className="BinanceCandlestickChart_3"
-              style={{
-                height: "100vh",
-              }}
-            >
-              <BinanceDOMUSDT3_Chart />
-            </div>
-            <div
-              className="BinanceCandlestickChart_4"
-              style={{
-                height: "100vh",
-              }}
-            >
-              <BinanceDOMUSDT4_Chart />
-            </div>
-            <div
-              className="BinanceCandlestickChart_5"
-              style={{
-                height: "100vh",
-              }}
-            >
-              <BinanceDOMUSDT5_Chart />
-            </div>
-            <div
-              className="BinanceCandlestickChart_6"
-              style={{
-                height: "100vh",
-              }}
-            >
-              <BinanceDOMUSDT6_Chart />
-            </div>
           </div>
         </div>
       </>

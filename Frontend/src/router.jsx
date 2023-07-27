@@ -9,11 +9,12 @@ import { Routes, Route } from "react-router-dom";
 
 //import Wallet from "../../../comp/ui/Tools/Wallet/Wallet";*/
 import Ec from "./view/pages/ec/ec_main/ec_main";
-
 import API_Insert from "./view/pages/api/apikeyinsert";
+
+// ==== Binance SPOT ====
 import Binance_SPOT_DOM_1X from "./view/pages/binance/DOM/Binance_SPOT_DOM_1X";
 import Binance_SPOT_DOM_2X from "./view/pages/binance/DOM/Binance_SPOT_DOM_2X";
-
+// ==== Binance USDT ====
 import Binance_USDT_DOM_2X from "./view/pages/binance/DOM/Binance_USDT_DOM_2X";
 import Binance_USDT_DOM_4X from "./view/pages/binance/DOM/Binance_USDT_DOM_4X";
 import Binance_USDT_DOM_6X from "./view/pages/binance/DOM/Binance_USDT_DOM_6X";
@@ -21,8 +22,12 @@ import Heatmap_USDT from "./view/pages/binance/Heatmap_USDT";
 import Login from "./view/Login";
 //========== EXE Trading ======================================================================================
 import Settings from "./view/pages/settings/settings";
+//==== Market Analysis ====
 import MarketOverview from "./view/pages/ec/ec_tools/market/Cryptolist";
 import CryptoInfo from "./view/pages/ec/ec_tools/market/CryptoInfo";
+import CryptoExchanges from "./view/pages/ec/ec_tools/market/ExchangeList";
+
+import TradingViewWidget from "./comp/charts/TradingView_Widget";
 
 //========== Trading Tools ================================================================================
 import Aggregator_USDT from "./view/pages/ec/ec_tools/trading_tools/aggregators/aggregator_USDT/aggregator_USDT";
@@ -44,8 +49,18 @@ export function MainView() {
           element={<MarketOverview />}
         />
         <Route
+          path="/EXE_Trading/CryptoExchanges"
+          element={<CryptoExchanges />}
+        />
+
+        <Route
           path="/EXE_Trading/MarketOverview/CrytpoInfo"
           element={<CryptoInfo />}
+        />
+
+        <Route
+          path="/EXE_Trading/TradingViewChart"
+          element={<TradingViewWidget />}
         />
         <Route
           path="/EXE_Trading/TradingTools/Aggregator_SPOT"

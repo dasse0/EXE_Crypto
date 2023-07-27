@@ -97,8 +97,14 @@ export default function Startpage() {
 
               {/* ======= EXE Crypto = Market ========================== */}
 
-              <Nav.Menu eventKey="1" title="Trading Tools">
-                {/* ======= EXE Crypto = Aggregators ========================== */}
+              <Nav.Menu
+                eventKey="1"
+                title="Trading Tools"
+                active="1"
+                defaultActiveKey="1"
+                open
+              >
+                {/* ======= EXE Crypto = Orderbook ========================== */}
                 <Nav.Menu eventKey="1-1" title="Orderbooks">
                   <Nav.Menu
                     eventKey="1-1-1"
@@ -196,7 +202,7 @@ export default function Startpage() {
                     </Nav.Item>
                   </Nav.Menu>
                 </Nav.Menu>
-
+                {/* ================== Aggregators ==================== */}
                 <Nav.Menu eventKey="2-1" title="Aggregators">
                   <Nav.Menu
                     eventKey="2-1-1"
@@ -273,6 +279,28 @@ export default function Startpage() {
                       Dual Aggregator
                     </Nav.Item>
                   </Nav.Menu>
+                </Nav.Menu>
+                {/* ================== Charts ==================== */}
+                <Nav.Menu
+                  eventKey="3-1"
+                  title="Charts"
+                  style={{
+                    textDecoration: "none",
+                    backgroundColor: "#246",
+                  }}
+                >
+                  <Nav.Item
+                    eventKey="3-1-1"
+                    onClick={() => {
+                      window.location.href = "/EXE_Trading/TradingViewChart";
+                    }}
+                    style={{
+                      textDecoration: "none",
+                      backgroundColor: "#228",
+                    }}
+                  >
+                    TradingView
+                  </Nav.Item>
                 </Nav.Menu>
               </Nav.Menu>
             </Nav>

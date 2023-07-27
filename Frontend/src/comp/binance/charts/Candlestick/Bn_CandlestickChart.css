@@ -5,14 +5,10 @@
 .BinanceCandlestickChart_5,
 .BinanceCandlestickChart_6 {
     color: orange;
-
+    display: flex;
     
-
-    max-height: calc(55vh - 325px);
-
+    height: 30vh;
     
-    max-width: 100%;
-
 
 
 

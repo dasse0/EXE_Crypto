@@ -151,15 +151,6 @@ export default class Main extends React.Component {
               gridTemplateColumns: "1fr 1fr",
             }}
           >
-            <BinanceDOMSPOT1 />
- 
-            <div
-              className="TradingExecutions"
-              style={{
-                backgroundColor: "gray",
-              }}
-            ></div>
-
             <div
               className="BinanceCandlestickChart_1"
               style={{
@@ -168,6 +159,14 @@ export default class Main extends React.Component {
             >
               <BinanceDOMSPOT1_Chart />
             </div>
+            <div
+              className="TradingExecutions"
+              style={{
+                backgroundColor: "gray",
+              }}
+            ></div>
+
+            <BinanceDOMSPOT1 />
 
             {/* ===== Orders ==== */}
             <div

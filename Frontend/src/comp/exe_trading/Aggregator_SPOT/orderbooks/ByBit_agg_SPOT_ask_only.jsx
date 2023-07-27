@@ -102,8 +102,6 @@ class BybitOrderbook extends Component {
     this.setState({
       asks: newOrders,
     });
-
-
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevState.asks !== this.state.asks) {
@@ -112,9 +110,6 @@ class BybitOrderbook extends Component {
       });
     }
   }
-  
-  
-
 
   render() {
     return (

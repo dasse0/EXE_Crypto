@@ -148,28 +148,40 @@ export default class Main extends React.Component {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "2fr 2fr",
-              gridTemplateRows: "1fr 1fr",
+              gridTemplateColumns: "1fr 1fr",
+         
               height: "50vh",
+          
             }}
           >
-            <BinanceDOMUSDT1 />
-            <BinanceDOMUSDT2 />
+            
+            
             <div
               className="BinanceCandlestickChart_1"
               style={{
-                height: "100vh",
+                
+                display: "grid",
+                gridTemplateRows: "1fr 1fr",
+                maxHeight: "40vh",
+                
               }}
+
             >
               <BinanceDOMUSDT1_Chart />
+              <BinanceDOMUSDT1 />
             </div>
             <div
               className="BinanceCandlestickChart_2"
               style={{
-                height: "100vh",
+              
+                display: "grid",
+                gridTemplateRows: "1fr 1fr",
+                maxHeight: "40vh",
+                
               }}
             >
               <BinanceDOMUSDT2_Chart />
+              <BinanceDOMUSDT2 />
             </div>
           </div>
         </div>
